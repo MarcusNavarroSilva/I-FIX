@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Grupo Assistência técnica de aparelhos Apple">
+  <meta name="description" content="Realizamos reparos em Iphone e Ipad, consertos via delivery, rápidos e com garantia">
+  <meta name="keywords" content="iphone, ipad, consertar, smartphone">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>SmartApple</title>
+</head>
+
+<body>
+        <header>
+        <div class="banner">
+            <img src="Imagens/banner3.png" alt="Banner SmartApple">
+        </div>
+        <div class="logo-destaque">
+            <img src="Imagens/Logo.png" alt="Logo SmartApple">
+        </div>
+        
+        <nav class="menu_principal">
+        <ul>
+            <li><a href="form.html">CADASTRO</a></li>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="servico.html">Sobre nós</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="formulario">
+            <div>
+            <h1 id="titulo">Formulário Manutenção</h1>
+            <p id="subtitulo">Complete suas informações</p>
+            </div>
+
+            <form>
+            <!-- NOME + SOBRENOME LADO A LADO -->
+            <fieldset class="grupo">
+                <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required />
+                </div>
+
+                <div class="campo">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" required />
+                </div>
+            </fieldset>
+
+            
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required />
+            </div>
+
+            <div class="campo">
+                <label>O aparelho sofreu algum dos eventos abaixo recentemente?</label>
+
+                <div class="opcoes">
+                <label><input type="radio" name="evento" /> Queda</label>
+                <label
+                    ><input type="radio" name="evento" /> Contato com líquido</label
+                >
+                <label><input type="radio" name="evento" /> Nenhum</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label for="modelo">Modelo:</label>
+                <select id="modelo">
+                <option>iPhone 6 / 6 Plus</option>
+                <option>iPhone 7 / 7 Plus</option>
+                <option>iPhone 8 / 8 Plus</option>
+                <option>iPhone X</option>
+                <option>iPhone 11</option>
+                <option>iPhone 12</option>
+                <option>iPhone 13</option>
+                <option>iPhone 14</option>
+                <option>iPhone 15</option>
+                <option>iPhone 16</option>
+                <option>Outro</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Qual é a urgência do conserto?</label>
+
+                <div class="opcoes">
+                <label><input type="checkbox" /> Alta (1 a 2 dias)</label>
+                <label><input type="checkbox" /> Média (4 dias)</label>
+                <label><input type="checkbox" /> Baixa</label>
+                </div>
+            </div>
+
+            <div class="campo">
+                <label>Observações:</label>
+                <textarea rows="6"></textarea>
+            </div>
+
+            <button class="botao" type="submit">Concluído</button>
+            </form>
+
+        </div>
+        <div class="termos">
+            <details>
+                <summary>Termos de Serviço</summary>
+                <div class="textoTermos">
+                    <p>
+                        Ao solicitar um reparo em nossa assistência técnica, o cliente autoriza a realização de uma análise detalhada do dispositivo com o objetivo de identificar a origem do problema. Após essa avaliação, um orçamento será apresentado, e qualquer serviço somente será executado mediante aprovação prévia. Recomendamos fortemente que o cliente realize backup de seus dados antes do envio do aparelho, pois não nos responsabilizamos por eventuais perdas de informações durante o processo. Aparelhos que apresentem sinais de violação, danos severos ou contato com líquidos podem ter limitações no reparo, sendo essas condições previamente informadas. O prazo e os valores dos serviços podem variar de acordo com a complexidade do problema e a disponibilidade de peças no momento.
+                    </p>
+                </div>
+            </details>
+        </div>
+        <div class="termos">
+            <details>
+                <summary>Garantia</summary>
+                <div class="textoTermos">
+                    <p>
+                        Todos os serviços realizados contam com garantia de 90 dias, válida tanto para as peças substituídas quanto para a mão de obra aplicada. Essa garantia cobre exclusivamente defeitos relacionados ao reparo executado, assegurando o funcionamento adequado do dispositivo após o serviço. Não estão incluídos na cobertura danos decorrentes de mau uso, quedas, contato com líquidos ou qualquer tipo de intervenção realizada por terceiros após o reparo. Em caso de acionamento da garantia, o aparelho passará por uma nova análise técnica para verificação do problema. Trabalhamos com peças de alta qualidade para garantir maior durabilidade e desempenho ao dispositivo.
+                    </p>
+                </div>
+            </details>
+        </div>
+        <div class="termos">
+            <details>
+                <summary>Tempo de reparo</summary>
+                <div class="textoTermos">
+                    <p>
+                        O tempo de reparo pode variar conforme o tipo de serviço necessário. Em geral, reparos mais simples, como troca de tela, bateria ou conectores, são realizados em um prazo de 24 a 48 horas. Já serviços mais complexos, como reparos em placa, recuperação de aparelhos com danos por líquido ou procedimentos de microsoldagem, podem demandar entre 3 a 7 dias úteis. O prazo também pode sofrer alterações de acordo com o modelo do aparelho e a disponibilidade de peças. Caso haja qualquer mudança no tempo estimado, o cliente será informado previamente. Para maior comodidade, também oferecemos a possibilidade de serviços expressos, mediante consulta de disponibilidade.
+                    </p>
+                </div>
+            </details>
+        </div>
+
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>

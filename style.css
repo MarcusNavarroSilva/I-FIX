@@ -1,0 +1,1057 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cinza-escuro: #1a1a1a;
+  --cinza-medio: #2c2c2c;
+  --cinza-claro: #f5f5f5;
+  --branco: #ffffff;
+  --prata: #c0c0c0;
+  --menu-bg: #1c1c1e;
+  --menu-texto: #f0f0f0;
+  --logo-size: 88px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--cinza-claro);
+  color: var(--cinza-medio);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  position: relative;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, transparent, rgba(28, 28, 30, 0.6));
+}
+
+.logo-destaque {
+  position: absolute;
+  top: calc(320px - var(--logo-size) / 2);
+  left: 3rem;
+  z-index: 20;
+}
+
+.logo-destaque img {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  border-radius: 50%;
+  background: var(--branco);
+  padding: 0.6rem;
+  border: 3px solid var(--branco);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.logo-destaque img:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.menu_principal {
+  background: var(--menu-bg);
+}
+
+.menu_principal ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  height: 5.6rem;
+  padding-right: 4rem;
+  gap: 4rem;
+}
+
+.menu_principal ul li a {
+  font-family: "Syne", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--menu-texto);
+  position: relative;
+  padding-bottom: 0.3rem;
+  transition: color 0.2s;
+}
+
+.menu_principal ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--prata);
+  transition: width 0.3s ease;
+}
+
+.menu_principal ul li a:hover {
+  color: var(--prata);
+}
+
+.menu_principal ul li a:hover::after {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.Manutencao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  width: 85%;
+  max-width: 1100px;
+  margin: 7rem auto 5rem;
+}
+
+.reparo {
+  flex: 1;
+}
+
+.reparo h1 {
+  font-size: 3.2rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  color: var(--cinza-escuro);
+}
+
+.reparo p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.reparo ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.reparo ul li {
+  font-size: 1.5rem;
+  color: var(--cinza-medio);
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+.reparo ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--prata);
+}
+
+.foto_reparo {
+  flex: 1;
+}
+
+.foto_reparo img {
+  width: 100%;
+  border-radius: 1.2rem;
+  display: block;
+}
+
+.divisor {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.Servicos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  width: 85%;
+  max-width: 1100px;
+  margin: 5rem auto;
+  flex-direction: row-reverse;
+}
+
+.servico {
+  flex: 1;
+}
+
+.servico h1 {
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 2rem;
+  color: var(--cinza-escuro);
+}
+
+.servico ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.servico ul li {
+  font-size: 1.6rem;
+  padding: 1rem 1.6rem;
+  background: var(--branco);
+  border-radius: 0.8rem;
+  border-left: 3px solid var(--cinza-escuro);
+  color: var(--cinza-medio);
+}
+
+.imagem_servico {
+  flex: 1;
+}
+
+.imagem_servico img {
+  width: 100%;
+  border-radius: 1.2rem;
+  display: block;
+}
+.contato {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.contatolista {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 2rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: #1a1a1a 0.2rem solid;
+}
+
+.contatolista > h3 {
+  font-size: 2rem;
+}
+
+.glass-store-card,
+.social-links {
+  font-size: 1.6rem;
+}
+.glass-store-card {
+  display: flex;
+  justify-content: flex-start;
+}
+.Logistica {
+  background: var(--cinza-escuro);
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.delivery {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.delivery h1 {
+  font-size: 3.4rem;
+  color: var(--branco);
+  margin-bottom: 1rem;
+}
+
+.delivery p {
+  font-size: 1.7rem;
+  color: var(--prata);
+  margin-bottom: 3.5rem;
+}
+
+.delivery ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.delivery ul li {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 2.4rem;
+  border: 1.5px solid var(--prata);
+  border-radius: 10rem;
+  color: var(--branco);
+  letter-spacing: 0.06em;
+}
+
+.Historia {
+  width: 85%;
+  max-width: 800px;
+  margin: 6rem auto;
+  text-align: center;
+}
+
+.texto_historia h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1.6rem;
+  color: var(--cinza-escuro);
+}
+
+.texto_historia p {
+  font-size: 1.8rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/*Formulário*/
+
+form {
+  width: 85%;
+  max-width: 80rem;
+  margin: 4rem auto;
+}
+
+#titulo {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 2.6rem;
+  color: black;
+}
+
+#subtitulo {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+}
+
+fieldset {
+  border: none;
+}
+
+#modelo option {
+  font-size: 1.5rem;
+}
+
+.grupo {
+  display: flex;
+  gap: 5rem;
+}
+
+.campo {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: 1.7rem;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.4rem;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.6rem;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+  box-sizing: border-box;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: #59429d;
+  box-shadow: 0 0 0 0.2rem rgba(89, 66, 157, 0.2);
+}
+
+.opcoes {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.opcoes label {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+textarea {
+  height: 12rem;
+  resize: vertical;
+}
+
+.botao {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.6rem;
+  background: #59429d;
+  color: white;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.botao:hover {
+  background: #483080;
+}
+/*Fim do formulário*/
+
+/*Termos*/
+.termos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+  max-width: 80rem;
+  margin: 4rem auto;
+  padding: 1rem 0;
+  background-color: white;
+  border-radius: 0.6rem;
+}
+.termos > details > summary {
+  font-size: 2rem;
+  text-decoration: none;
+  list-style-type: none;
+  transition: transform 0.3s ease;
+}
+.termos > details > summary:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.termos > details[open] > summary {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.termos > details > .textoTermos {
+  padding-left: 2.5%;
+  width: 95%;
+}
+.termos > details > .textoTermos > p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+/*Fim dos termos*/
+/*sobre o site*/
+.sobresite {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 15%;
+  gap: 5em;
+  margin-top: 5rem;
+}
+
+.sobresite > h1 {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 650;
+}
+
+.sobresite > p,
+.aluno > .descricaoaluno > p {
+  font-size: 1.8rem;
+  line-height: 3rem;
+}
+.aluno > h1 {
+  font-size: 3rem;
+}
+/*servico*/
+.alunos {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 15%;
+  gap: 10rem;
+  margin-top: 20rem;
+}
+.aluno {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: black solid 0.4rem;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  box-shadow: rgb(38, 57, 77) 0px 2rem 3rem -1rem;
+}
+
+.descricaoaluno {
+  display: flex;
+  align-items: center;
+}
+.redesalunos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.descricaoaluno > figure > img {
+  border-radius: 1rem;
+}
+/*fim servico*/
+
+footer {
+  background: var(--cinza-escuro);
+  color: var(--prata);
+}
+
+footer .direitos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+}
+
+.popup-promo {
+  position: fixed;
+  bottom: 2.4rem;
+  right: 2.4rem;
+  width: 28rem;
+  background: #1c1c1e;
+  border-radius: 1.6rem;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(3rem) scale(0.95);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.popup-promo.popup-visivel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+.popup-fechar {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.6rem;
+  transition: color 0.2s;
+}
+
+.popup-fechar:hover {
+  color: #fff;
+}
+
+.popup-tag {
+  background: #2c2c2e;
+  padding: 0.8rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.popup-dot {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #4cd964;
+  flex-shrink: 0;
+}
+
+.popup-tag span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c0c0c0;
+}
+
+.popup-body {
+  padding: 1.6rem 1.8rem 1.8rem;
+}
+
+.popup-badge {
+  display: inline-block;
+  background: #fff;
+  color: #1c1c1e;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0.5rem 1.4rem;
+  border-radius: 10rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.popup-titulo {
+  font-family: "Syne", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.popup-texto {
+  font-size: 1.3rem;
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+
+.popup-btn {
+  display: block;
+  width: 100%;
+  background: #fff;
+  color: #1c1c1e;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.1rem;
+  font-family: "Syne", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: opacity 0.2s;
+}
+
+.popup-btn:hover {
+  opacity: 0.85;
+}
+
+/* carrosel dos aparelhos */
+
+.catalogo-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.catalogo {
+  background: rgba(120, 120, 120, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: scrollLeft 60s linear infinite;
+}
+
+.catalogo:hover {
+  animation-play-state: paused;
+}
+
+.catalogo div {
+  flex-shrink: 0;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.catalogo img {
+  height: 240px;
+  width: auto;
+  border-radius: 8px;
+  display: block;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.catalogo img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+.Logistica {
+  background: var(--cinza-escuro);
+  padding: 6rem 0;
+  width: 100%;
+}
+
+.delivery {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.delivery h1 {
+  font-size: 3.4rem;
+  color: var(--branco);
+  margin-bottom: 1rem;
+}
+
+.delivery p {
+  font-size: 1.7rem;
+  color: var(--prata);
+  margin-bottom: 3.5rem;
+}
+
+.delivery ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.delivery ul li {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1rem 2.4rem;
+  border: 1.5px solid var(--prata);
+  border-radius: 10rem;
+  color: var(--branco);
+  letter-spacing: 0.06em;
+}
+
+/* glassmorfismo */
+
+.vidro {
+  width: 100%;
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 3rem;
+
+  background: rgba(128, 236, 255, 0.08);
+  border-radius: 2rem;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.texto h1 {
+  font-size: 3.2rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.texto p {
+  font-size: 1.6rem;
+  color: black;
+}
+
+.texto span {
+  margin-right: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.vidro:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    inset 0 0 15px rgba(255, 255, 255, 0.08);
+}
+
+/* ADAPTAÇÃO PRA TABLET */
+
+@media (max-width: 1024px) {
+  .banner img {
+    height: 260px;
+  }
+
+  .logo-destaque {
+    top: 21.5rem;
+    left: 8rem;
+  }
+
+  .menu_principal ul {
+    padding-right: 2rem;
+    gap: 2.5rem;
+  }
+
+  .Manutencao {
+    width: 90%;
+    gap: 2.5rem;
+  }
+
+  .foto_reparo {
+    width: 30rem;
+  }
+
+  .reparo h1 {
+    font-size: 2.8rem;
+  }
+
+  .reparo p {
+    font-size: 1.55rem;
+  }
+
+  .imagem_servico {
+    width: 40rem;
+  }
+
+  .Servicos {
+    width: 90%;
+    gap: 2.5rem;
+  }
+
+  .servico h1 {
+    font-size: 2.6rem;
+  }
+
+  .servico ul li {
+    font-size: 1.5rem;
+    padding: 0.9rem 1.4rem;
+  }
+
+  .catalogo img {
+    height: 200px;
+  }
+
+  .delivery h1 {
+    font-size: 3rem;
+  }
+
+  .delivery p {
+    font-size: 1.6rem;
+  }
+
+  .delivery ul {
+    gap: 1.5rem;
+  }
+
+  .Historia {
+    width: 90%;
+  }
+
+  .texto_historia h1 {
+    font-size: 2.8rem;
+  }
+
+  .texto_historia p {
+    font-size: 1.7rem;
+  }
+
+  .vidro {
+    max-width: 500px;
+    padding: 2.5rem;
+  }
+
+  .texto h1 {
+    font-size: 2.8rem;
+  }
+
+  .popup-promo {
+    width: 26rem;
+    right: 2rem;
+    bottom: 2rem;
+  }
+}
+
+/* ADAPTAÇÃO PRA CELULAR */
+
+@media (max-width: 768px) {
+  .banner img {
+    height: 200px;
+  }
+
+  .logo-destaque {
+    top: 35%;
+    left: 18%;
+    transform: translateX(-50%);
+  }
+
+  .menu_principal ul {
+    justify-content: center;
+    padding-right: 0;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .Manutencao {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: 5rem auto;
+  }
+
+  .reparo h1 {
+    font-size: 2.4rem;
+  }
+
+  .reparo p {
+    font-size: 1.5rem;
+  }
+
+  .reparo ul {
+    align-items: center;
+  }
+
+  .foto_reparo {
+    margin-top: 2rem;
+  }
+
+  .Servicos {
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+  }
+
+  .servico h1 {
+    font-size: 2.4rem;
+  }
+
+  .imagem_servico {
+    margin-top: 2rem;
+  }
+
+  .catalogo img {
+    height: 160px;
+  }
+
+  .delivery h1 {
+    font-size: 2.6rem;
+  }
+
+  .delivery p {
+    font-size: 1.5rem;
+  }
+
+  .delivery ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .texto_historia h1 {
+    font-size: 2.4rem;
+  }
+
+  .texto_historia p {
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+
+  .contatolista {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 2rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: #1a1a1a 0.2rem solid;
+  }
+
+  .contatolista > h3 {
+    font-size: 2rem;
+  }
+
+  .glass-store-card,
+  .social-links {
+    font-size: 1.6rem;
+  }
+  .glass-store-card {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .vidro {
+    margin: 3rem 1.5rem;
+    padding: 2rem;
+  }
+
+  .texto h1 {
+    font-size: 2.4rem;
+  }
+
+  .texto p {
+    font-size: 1.5rem;
+  }
+
+  .popup-promo {
+    width: 90%;
+    right: 5%;
+    bottom: 1.5rem;
+  }
+}
